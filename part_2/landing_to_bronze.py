@@ -1,18 +1,9 @@
-# landing_to_bronze.py
-
 import os
 import requests
 from pyspark.sql import SparkSession
 
 
 def download_data(file_name, local_dir):
-    """
-    Downloads a CSV file from the FTP server and saves it locally.
-
-    Args:
-        file_name (str): Name of the file to download (without extension).
-        local_dir (str): Local directory to save the downloaded file.
-    """
     base_url = "https://ftp.goit.study/neoversity/"
     downloading_url = f"{base_url}{file_name}.csv"
     local_file_path = os.path.join(local_dir, f"{file_name}.csv")
