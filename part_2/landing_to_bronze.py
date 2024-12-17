@@ -13,7 +13,6 @@ def download_data(file_name, local_dir):
 
     # Check if the request was successful (status code 200)
     if response.status_code == 200:
-        # Ensure the local directory exists
         os.makedirs(local_dir, exist_ok=True)
 
         # Write the content to the local file
